@@ -1,0 +1,268 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Global Variables */
+:root {
+  --primary-color: rgb(16, 147, 229);
+  --hoverColor: rgb(3, 158, 255);
+  --bgBlack: rgb(0, 0, 0);
+}
+
+/* Navigation Menu */
+
+.navBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background: var(--bgBlack);
+  z-index: 10;
+}
+
+.navBar:hover {
+  background-color: rgb(25, 25, 25);
+}
+
+.navBar ul {
+  display: flex;
+  padding: 5px;
+}
+
+.navBar ul li {
+  list-style-type: none;
+  padding: 10px 12px;
+}
+
+.navBar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navBar ul li:hover {
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+/* Hero Section */
+.main {
+  position: relative;
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.intro {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+/* Adding text animation for h1 */
+@keyframes zoomInOut {
+  0%,
+  100% {
+    color: white;
+  }
+  50% {
+    color: #00ece5;
+  }
+}
+
+.intro h1 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  animation: zoomInOut 2s ease-in-out infinite;
+}
+
+.intro h2 {
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.intro p {
+  font-size: 16px;
+  margin-bottom: 50px;
+  text-align: justify;
+}
+
+.intro .btn,
+.start-btn {
+  background-color: #4caf50;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+.intro .btn:hover,
+.start-btn:hover {
+  background-color: #45a049;
+}
+
+/* Quiz Section */
+.quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.quiz {
+  text-align: center;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz select,
+.quiz button {
+  margin: 10px;
+  padding: 10px;
+}
+.quiz label {
+  padding: 5px;
+  font-size: large;
+  margin-top: 20px;
+}
+.selectCard {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+}
+.contact h2 {
+  margin: 25px 0px 20px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-item img {
+  width: 50px;
+  height: 50px;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.contact a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.contact a:hover {
+  color: black;
+}
+
+.contact-item {
+  background-color: rgba(230, 230, 230, 0.8);
+  padding: 8px 5px;
+  border-radius: 5px;
+  height: 100px;
+  width: 100px;
+}
+.contact-item:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.contact-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.sub-heading {
+  color: black;
+  margin: 10px;
+}
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  padding: 8px;
+  background-color: black;
+  color: #fff;
+  font-size: small;
+}
+
+/* Quiz */
+.displayQuiz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.finalScore,
+.loadingError {
+  width: fit-content;
+  font-size: larger;
+  font-weight: bold;
+  color: rgb(0, 185, 55);
+  background-color: rgba(230, 230, 230, 0.8);
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+.loadingError {
+  color: red;
+}
+
+/* Question */
+.question {
+  color: rgb(119, 0, 223);
+  font-size: large;
+}
+
+/* Options */
+#quizContainer button {
+  padding: 5px 10px;
+}
+
+#quizContainer {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  max-width: 80vw;
+}
