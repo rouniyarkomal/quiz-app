@@ -3,7 +3,7 @@
 A clean and simple web-based quiz application built with HTML, CSS, and vanilla JavaScript. This project provides a straightforward way to present multiple-choice questions to users and display their scores at the end.
 
 ## 📸 Demo
-**Click Here:** https://rouniyarkomal.github.io/quiz-app/
+**Click Here:** https://rouniyarkomal.github.io/quiz-app/ <br/>
 The user interface is designed to be simple and intuitive. A question is presented with four possible answers. After submitting an answer, the next question is loaded automatically. At the end, the total score is displayed.
 
 
